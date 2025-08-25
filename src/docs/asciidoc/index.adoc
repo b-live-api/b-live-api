@@ -1,0 +1,37 @@
+:doctype: book
+:icons: font
+:toc: left
+:toclevels: 3
+:source-highlighter: highlightjs
+:sectlinks:
+
+= B.LIVE API Specification
+
+== 여행지(Spot)
+
+== 코스(Course)
+
+== 회원(Member)
+
+== 이벤트(Event)
+
+== 축제 및 행사(Festival)
+
+== 날씨(Whether)
+
+**Request**
+
+include::{snippets}/whether/http-request.adoc[]
+**Response**
+
+include::{snippets}/whether/http-response.adoc[]
+
+== 테마(Theme)
+
+**Request**
+
+include::{snippets}/themes/http-request.adoc[]
+
+**Response**
+
+include::{snippets}/themes/http-response.adoc[]
