@@ -19,19 +19,21 @@
 
 == 날씨(Whether)
 
-**Request**
+=== /api/v1/whether
+==== Request Example
 
 include::{snippets}/whether/http-request.adoc[]
-**Response**
+==== Response Example
 
 include::{snippets}/whether/http-response.adoc[]
 
 == 테마(Theme)
 
-**Request**
-
+=== /api/v1/themes
+==== Request Example
 include::{snippets}/themes/http-request.adoc[]
 
-**Response**
-
+==== Response Field
+include::{snippets}/themes/response-fields.adoc[]
+==== Response Example
 include::{snippets}/themes/http-response.adoc[]

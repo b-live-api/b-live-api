@@ -1,16 +1,18 @@
-package live.b.api.whether.adapter.web;
+package live.b.api.area.adapter.web;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("/api/v1/whether")
-public class WhetherController {
+@RequestMapping("/api/v1/areas")
+public class AreaApi {
 
     @GetMapping
-    public ResponseEntity<WhetherResponse> whether() {
-        return ResponseEntity.ok(new WhetherResponse("23"));
+    public ResponseEntity<List<AreaResponse>> areas() {
+        return ResponseEntity.ok(List.of());
     }
 }

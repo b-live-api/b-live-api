@@ -10,6 +10,6 @@ import org.springframework.restdocs.RestDocumentationExtension;
 @AutoConfigureRestDocs
 @AutoConfigureMockMvc(addFilters = false)
 @ExtendWith(RestDocumentationExtension.class)
-public abstract class BaseControllerTest {
+public abstract class ApiDocumentationTest {
 
 }

@@ -1,6 +1,6 @@
 package live.b.api.whether.adapter.web;
 
-import live.b.api.support.BaseControllerTest;
+import live.b.api.support.ApiDocumentationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -10,7 +10,7 @@ import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.docu
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 
-class WhetherControllerTest extends BaseControllerTest {
+class WhetherApiTest extends ApiDocumentationTest {
 
     @Autowired
     MockMvcTester mockMvcTester;

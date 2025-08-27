@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/themes")
-public class ThemeController {
+public class ThemeApi {
 
     @GetMapping
     public ResponseEntity<List<ThemeResponse>> themes() {

@@ -1,4 +1,4 @@
-package live.b.api.event.adapter.web;
+package live.b.api.festival.adapter.web;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/events")
-public class EventController {
+@RequestMapping("/api/v1/festivals")
+public class FestivalApi {
 
     @GetMapping
-    public ResponseEntity<List<EventResponse>> events() {
+    public ResponseEntity<List<FestivalResponse>> festivals() {
         return ResponseEntity.ok(List.of());
     }
 }
