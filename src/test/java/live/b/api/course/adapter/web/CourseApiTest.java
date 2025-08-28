@@ -3,10 +3,11 @@ package live.b.api.course.adapter.web;
 import live.b.api.support.ApiDocumentationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
-import org.springframework.restdocs.payload.JsonFieldType;
 
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
-import static org.springframework.restdocs.payload.JsonFieldType.*;
+import static org.springframework.restdocs.payload.JsonFieldType.ARRAY;
+import static org.springframework.restdocs.payload.JsonFieldType.NUMBER;
+import static org.springframework.restdocs.payload.JsonFieldType.STRING;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.restdocs.payload.PayloadDocumentation.subsectionWithPath;
@@ -44,7 +45,6 @@ class CourseApiTest extends ApiDocumentationTest {
                 .hasPath("$[0].spots[0].spotId")
                 .hasPath("$[0].spots[0].spotName")
                 .hasPath("$[0].spots[0].spotImageUrl");
-        ;
     }
 
 }
