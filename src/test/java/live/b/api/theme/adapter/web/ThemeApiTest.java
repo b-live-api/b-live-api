@@ -2,18 +2,13 @@ package live.b.api.theme.adapter.web;
 
 import live.b.api.support.ApiDocumentationTest;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.assertj.MockMvcTester;
 
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 
 class ThemeApiTest extends ApiDocumentationTest {
-
-    @Autowired
-    MockMvcTester mockMvcTester;
 
     @Test
     void themes() {
