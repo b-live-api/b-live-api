@@ -4,6 +4,8 @@ import live.b.api.support.ApiDocumentationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 
+import static live.b.api.support.ApiDocumentUtils.getDocumentRequest;
+import static live.b.api.support.ApiDocumentUtils.getDocumentResponse;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
@@ -16,6 +18,8 @@ class SpotApiTest extends ApiDocumentationTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .assertThat()
                 .apply(document("spots",
+                        getDocumentRequest(),
+                        getDocumentResponse(),
                         responseFields(
                                 fieldWithPath("[].spotId").description("여행지 ID"),
                                 fieldWithPath("[].spotName").description("여행지 이름"),

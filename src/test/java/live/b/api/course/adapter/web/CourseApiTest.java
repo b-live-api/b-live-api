@@ -4,13 +4,11 @@ import live.b.api.support.ApiDocumentationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 
+import static live.b.api.support.ApiDocumentUtils.getDocumentRequest;
+import static live.b.api.support.ApiDocumentUtils.getDocumentResponse;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
-import static org.springframework.restdocs.payload.JsonFieldType.ARRAY;
-import static org.springframework.restdocs.payload.JsonFieldType.NUMBER;
-import static org.springframework.restdocs.payload.JsonFieldType.STRING;
-import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
-import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
-import static org.springframework.restdocs.payload.PayloadDocumentation.subsectionWithPath;
+import static org.springframework.restdocs.payload.JsonFieldType.*;
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
 
 class CourseApiTest extends ApiDocumentationTest {
 
@@ -21,6 +19,8 @@ class CourseApiTest extends ApiDocumentationTest {
                 .assertThat()
                 .hasStatus2xxSuccessful()
                 .apply(document("courses",
+                                getDocumentRequest(),
+                                getDocumentResponse(),
                                 responseFields(
                                         fieldWithPath("[].courseId").type(NUMBER).description("코스 ID"),
                                         fieldWithPath("[].courseName").type(STRING).description("코스 이름"),
@@ -30,8 +30,7 @@ class CourseApiTest extends ApiDocumentationTest {
                                         fieldWithPath("[].courseImageUrl").type(STRING).description("코스 이미지 주소"),
                                         subsectionWithPath("[].spots").type(ARRAY).description("여행지 목록"),
                                         fieldWithPath("[].spots[].spotId").type(NUMBER).description("여행지 ID"),
-                                        fieldWithPath("[].spots[].spotName").type(STRING).description("여행지 이름"),
-                                        fieldWithPath("[].spots[].spotImageUrl").type(STRING).description("여행지 이미지 주소")
+                                        fieldWithPath("[].spots[].spotName").type(STRING).description("여행지 이름")
                                 )
                         )
                 )
@@ -43,8 +42,7 @@ class CourseApiTest extends ApiDocumentationTest {
                 .hasPath("$[0].durationHours")
                 .hasPath("$[0].courseImageUrl")
                 .hasPath("$[0].spots[0].spotId")
-                .hasPath("$[0].spots[0].spotName")
-                .hasPath("$[0].spots[0].spotImageUrl");
+                .hasPath("$[0].spots[0].spotName");
     }
 
 }

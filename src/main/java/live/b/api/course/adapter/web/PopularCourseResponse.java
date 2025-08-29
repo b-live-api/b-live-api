@@ -1,10 +1,8 @@
 package live.b.api.course.adapter.web;
 
-import live.b.api.spot.adapter.web.SpotResponse;
-
 import java.util.List;
 
-public record CourseResponse(
+public record PopularCourseResponse(
         Long courseId,
         String courseName,
         String courseTitle,
@@ -13,4 +11,9 @@ public record CourseResponse(
         String courseImageUrl,
         List<SpotResponse> spots
 ) {
+    public record SpotResponse(
+            Long spotId,
+            String spotName
+    ) {
+    }
 }

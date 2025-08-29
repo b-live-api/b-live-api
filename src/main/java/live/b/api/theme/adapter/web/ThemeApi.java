@@ -15,8 +15,8 @@ public class ThemeApi {
     public ResponseEntity<List<ThemeResponse>> themes() {
         return ResponseEntity.ok(
                 List.of(
-                        new ThemeResponse("theme1", "imageUrl1", "image1"),
-                        new ThemeResponse("theme2", "imageUrl2", "image2")
+                        new ThemeResponse("테마1", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg", "광안대교"),
+                        new ThemeResponse("테마2", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg", "광안대교")
                 ));
     }
 }

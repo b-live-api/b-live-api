@@ -12,12 +12,12 @@ import java.util.List;
 public class SpotApi {
 
     @GetMapping("/popular")
-    public ResponseEntity<List<SpotResponse>> popular() {
+    public ResponseEntity<List<PopularSpotResponse>> popular() {
         return ResponseEntity.ok(List.of(
-                new SpotResponse(1L, "여행지1", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg"),
-                new SpotResponse(2L, "여행지2", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg"),
-                new SpotResponse(3L, "여행지3", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg"),
-                new SpotResponse(4L, "여행지4", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg")
+                new PopularSpotResponse(1L, "여행지1", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg"),
+                new PopularSpotResponse(2L, "여행지2", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg"),
+                new PopularSpotResponse(3L, "여행지3", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg"),
+                new PopularSpotResponse(4L, "여행지4", "https://static.hubzum.zumst.com/hubzum/2024/03/25/14/a1aacd92e67e4b46802d082c47f07706.jpg")
         ));
     }
 }

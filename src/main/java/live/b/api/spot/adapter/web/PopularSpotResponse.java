@@ -1,6 +1,6 @@
 package live.b.api.spot.adapter.web;
 
-public record SpotResponse(
+public record PopularSpotResponse(
         Long spotId,
         String spotName,
         String spotImageUrl

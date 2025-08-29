@@ -4,6 +4,8 @@ import live.b.api.support.ApiDocumentationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 
+import static live.b.api.support.ApiDocumentUtils.getDocumentRequest;
+import static live.b.api.support.ApiDocumentUtils.getDocumentResponse;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWithPath;
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
@@ -17,6 +19,8 @@ class WhetherApiTest extends ApiDocumentationTest {
                 .assertThat()
                 .hasStatus2xxSuccessful()
                 .apply(document("whether",
+                        getDocumentRequest(),
+                        getDocumentResponse(),
                         responseFields(
                                 fieldWithPath("temperature").description("온도"))))
                 .bodyJson()
